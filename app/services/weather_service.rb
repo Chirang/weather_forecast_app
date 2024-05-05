@@ -3,7 +3,7 @@ require 'json'
 require 'timeout'
 
 class WeatherService
-  OPENWEATHERMAP_API_TIMEOUT = 1
+  OPENWEATHERMAP_API_TIMEOUT = 2
 
   def self.fetch_weather_data(latitude, longitude)
     

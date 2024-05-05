@@ -2,7 +2,7 @@ require 'open-uri'
 require 'json'
 
 class GeocodeService
-  MAPBOX_API_TIMEOUT = 1 # Timeout in seconds
+  MAPBOX_API_TIMEOUT = 2 # Timeout in seconds
 
   def self.geocode_address(address)
     mapbox_access_token = ENV['MAPBOX_ACCESS_TOKEN']
