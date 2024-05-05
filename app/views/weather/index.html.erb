@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Forecast</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <h1>Weather Forecast</h1>
+
+  <form id="weatherForm">
+    <%= label_tag :address, "Enter Address:" %>
+    <%= text_field_tag :address, nil, id: "addressInput", required: true %>
+    <%= button_to "Get Weather", "#", id: "getWeatherBtn" %>
+  </form>
+
+  <div id="weatherInfo"></div>
+  <div id="loader" style="display: none;">Loading...</div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const addressInput = document.getElementById('addressInput');
+    const getWeatherBtn = document.getElementById('getWeatherBtn');
+    const weatherInfoDiv = document.getElementById('weatherInfo');
+    const loader = document.getElementById('loader'); // Loader element
+
+    getWeatherBtn.addEventListener('click', async (event) => {
+      event.preventDefault();
+      const address = addressInput.value.trim();
+  
+      if (address) {
+        weatherInfoDiv.innerHTML = '';
+        loader.style.display = 'inline-block';
+  
+        try {
+          const weatherData = await fetchWeatherData(address);
+          displayWeather(weatherData);
+        } catch (error) {
+          console.error('Error fetching weather data:', error);
+          weatherInfoDiv.textContent = error;
+        } finally {
+          loader.style.display = 'none';
+        }
+      }
+    });
+
+    async function fetchWeatherData(address) {
+      try {
+        const response = await axios.get(`/weather/forecast?address=${encodeURIComponent(address)}`);
+        return response.data;
+      } catch (error) {
+        throw new Error(error.response.data.error);
+      }
+    }
+
+    function displayWeather(weatherData) {
+      if (weatherData.error) {
+        weatherInfoDiv.textContent = weatherData.error;
+      } else {
+        const location = weatherData.weather.name;
+        const currentTemp = weatherData.weather.main.temp;
+        const maxTemp = weatherData.weather.main.temp_max;
+        const minTemp = weatherData.weather.main.temp_min;
+        const source = weatherData.source;
+
+      let htmlContent = `
+        <h2>Weather Forecast</h2>
+        <p>Location: ${location}</p>
+        <p>Current Temperature: ${currentTemp} °C</p>
+        <p>Max Temperature: ${maxTemp} °C</p>
+        <p>Min Temperature: ${minTemp} °C</p>
+        <p>Data Source: ${source === 'cache' ? 'Cached' : 'API'}</p>
+      `;
+
+        weatherInfoDiv.innerHTML = htmlContent;
+        }
+    }
+  });
+
+  </script>
+</body>
+</html>

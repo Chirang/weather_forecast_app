@@ -1,0 +1,3429 @@
+Started GET "/" for ::1 at 2024-05-04 14:43:53 +0530
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2475)
+
+
+  
+ArgumentError (key cannot be blank):
+  
+app/controllers/weather_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2024-05-04 14:46:03 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 453)
+  Rendered layout layouts/application.html.erb (Duration: 364.5ms | Allocations: 82788)
+Completed 200 OK in 1598ms (Views: 367.7ms | ActiveRecord: 0.0ms | Allocations: 84806)
+
+
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:46:27 +0530
+  
+AbstractController::ActionNotFound (The action 'forecast' could not be found for WeatherController):
+  
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:47:28 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:47:59 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:48:01 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:48:16 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:48:18 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:48:38 +0530
+  
+AbstractController::ActionNotFound (The action 'forecast' could not be found for WeatherController):
+  
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:50:52 +0530
+  
+AbstractController::ActionNotFound (The action 'forecast' could not be found for WeatherController):
+  
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:52:37 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"360007", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1752)
+Completed 200 OK in 1030ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 3665)
+
+
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:52:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"360007", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1255)
+Completed 200 OK in 809ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 2234)
+
+
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:52:42 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"360007", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1254)
+Completed 200 OK in 1050ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2290)
+
+
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:53:31 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"360007", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1765)
+Completed 200 OK in 816ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 3588)
+
+
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:54:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"360007", "commit"=>"Get Weather"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2591)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f95465bc830>
+Did you mean?  try):
+  
+app/controllers/weather_controller.rb:15:in `forecast'
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:59:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"360007", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 480)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 20805)
+Completed 200 OK in 14782ms (Views: 60.6ms | ActiveRecord: 0.0ms | Allocations: 67202)
+
+
+Started GET "/weather/forecast?zip_code=360007&commit=Get+Weather" for ::1 at 2024-05-04 14:59:58 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"360007", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 1758)
+Completed 200 OK in 838651ms (Views: 68.0ms | ActiveRecord: 0.0ms | Allocations: 51823)
+
+
+Started GET "/weather/forecast?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-04 15:14:04 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1261)
+Completed 200 OK in 6663ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 12678)
+
+
+Started GET "/weather/forecast?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-04 15:14:59 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1256)
+Completed 200 OK in 5059ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 12672)
+
+
+Started GET "/weather/forecast?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-04 15:15:19 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+Completed 406 Not Acceptable in 978ms (ActiveRecord: 0.0ms | Allocations: 1823)
+
+
+  
+ActionController::MissingExactTemplate (WeatherController#forecast is missing a template for request formats: text/html):
+  
+actionpack (7.1.3.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/weather/forecast?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-04 15:17:10 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 1774)
+Completed 200 OK in 1170ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 3690)
+
+
+Started GET "/weather/forecast?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-04 15:17:14 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1249)
+Completed 200 OK in 1221ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2305)
+
+
+Started GET "/" for ::1 at 2024-05-04 15:18:05 +0530
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:11:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-05-04 15:18:46 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/chiragmalviya/.rbenv/versions/2.7.3/lib/ruby/gems/2.7.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/chiragmalviya/.rbenv/versions/2.7.3/lib/ruby/gems/2.7.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 451)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1305)
+
+
+Started GET "/" for ::1 at 2024-05-04 15:21:19 +0530
+  
+ArgumentError (:to must respond to `action` or `call`, or it must be a String that includes '#'):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-05-04 15:21:49 +0530
+  
+ArgumentError (:to must respond to `action` or `call`, or it must be a String that includes '#'):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-05-04 15:22:30 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 86.9ms | Allocations: 4419)
+  Rendered layout layouts/application.html.erb (Duration: 87.4ms | Allocations: 4490)
+Completed 500 Internal Server Error in 1070ms (ActiveRecord: 0.0ms | Allocations: 6331)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `weather_forecast_path' for #<ActionView::Base:0x0000000001b670>):
+    1: <!-- app/views/weather/index.html.erb -->
+    2: <%= form_tag(weather_forecast_path, method: :get) do %>
+    3:   <%= label_tag :zip_code, "Enter Zip Code:" %>
+    4:   <%= text_field_tag :zip_code, params[:zip_code], required: true %>
+    5:   <%= submit_tag "Get Weather" %>
+  
+app/views/weather/index.html.erb:2
+Started GET "/" for ::1 at 2024-05-04 15:25:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 55.5ms | Allocations: 5289)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 5385)
+Completed 500 Internal Server Error in 1202ms (ActiveRecord: 0.0ms | Allocations: 12306)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `weather_index' for #<ActionView::Base:0x0000000000ab40>
+Did you mean?  weather_index_url):
+    1: <!-- app/views/weather/index.html.erb -->
+    2: <%= form_tag(weather_index, method: :get) do %>
+    3:   <%= label_tag :zip_code, "Enter Zip Code:" %>
+    4:   <%= text_field_tag :zip_code, params[:zip_code], required: true %>
+    5:   <%= submit_tag "Get Weather" %>
+  
+app/views/weather/index.html.erb:2
+Started GET "/" for ::1 at 2024-05-04 15:25:47 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 465)
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 18789)
+Completed 200 OK in 857ms (Views: 81.7ms | ActiveRecord: 0.0ms | Allocations: 20649)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:25:51 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1268)
+Completed 200 OK in 1198ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2264)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:27:09 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1778)
+Completed 200 OK in 1009ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 3606)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:29:35 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 500 Internal Server Error in 847ms (ActiveRecord: 0.0ms | Allocations: 1790)
+
+
+  
+NoMethodError (undefined method `data' for nil:NilClass):
+  
+app/controllers/weather_controller.rb:8:in `index'
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:29:58 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 200 OK in 924ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 979)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:30:06 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 200 OK in 2783ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 846)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:32:27 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 200 OK in 1137ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 967)
+
+
+Started GET "/" for ::1 at 2024-05-04 15:32:41 +0530
+Processing by WeatherController#index as HTML
+Completed 200 OK in 1119ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 844)
+
+
+Started GET "/" for ::1 at 2024-05-04 15:32:44 +0530
+Processing by WeatherController#index as HTML
+Completed 200 OK in 1172ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 914)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:32:58 +0530
+Processing by WeatherController#index as HTML
+Completed 200 OK in 998ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 843)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:33:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+Completed 200 OK in 1238ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2584)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:34:58 +0530
+Processing by WeatherController#index as HTML
+Completed 200 OK in 1158ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 963)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:35:40 +0530
+Processing by WeatherController#index as HTML
+Completed 200 OK in 979ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1046)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:36:44 +0530
+Processing by WeatherController#index as HTML
+Completed 200 OK in 35488ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 37101)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:37:22 +0530
+Processing by WeatherController#index as HTML
+Completed 200 OK in 4235ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 10327)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:37:57 +0530
+Processing by WeatherController#index as HTML
+Completed 200 OK in 1246ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 978)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:38:16 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 502)
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | Allocations: 20730)
+Completed 200 OK in 1354ms (Views: 70.3ms | ActiveRecord: 0.0ms | Allocations: 26061)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:47:12 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 448)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1811)
+Completed 200 OK in 1206ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3675)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:51:57 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 404 Not Found in 1278ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1030)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:52:25 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 404 Not Found in 21915ms (Views: 48.2ms | ActiveRecord: 0.0ms | Allocations: 17308)
+
+
+Started GET "/weather" for ::1 at 2024-05-04 15:52:56 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather"):
+  
+Started GET "/weather/index" for ::1 at 2024-05-04 15:53:02 +0530
+Processing by WeatherController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:53:05 +0530
+Processing by WeatherController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 15:53:09 +0530
+Processing by WeatherController#index as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/" for ::1 at 2024-05-04 15:53:13 +0530
+Processing by WeatherController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/" for ::1 at 2024-05-04 15:53:31 +0530
+Processing by WeatherController#index as HTML
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 107)
+
+
+Started GET "/" for ::1 at 2024-05-04 15:56:09 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 77.3ms | Allocations: 4474)
+  Rendered layout layouts/application.html.erb (Duration: 89.8ms | Allocations: 4545)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.0ms | Allocations: 5506)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `weather_index_url' for #<ActionView::Base:0x0000000002e5e0>
+Did you mean?  weather_forecast_url):
+    1: <!-- app/views/weather/index.html.erb -->
+    2: <%= form_tag(weather_index_url, method: :get) do %>
+    3:   <%= label_tag :zip_code, "Enter Zip Code:" %>
+    4:   <%= text_field_tag :zip_code, params[:zip_code], required: true %>
+    5:   <%= submit_tag "Get Weather" %>
+  
+app/views/weather/index.html.erb:2
+Started GET "/" for ::1 at 2024-05-04 15:56:50 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 448)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 1811)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 2785)
+
+
+Started GET "/weather/index?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:56:54 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1300)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 1526)
+
+
+Started GET "/weather/forecast?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:57:54 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 404 Not Found in 836ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 3397)
+
+
+Started GET "/weather/forecast?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 15:59:35 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 404 Not Found in 1226ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 850)
+
+
+Started GET "/weather/forecast?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 16:01:03 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 404 Not Found in 800ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 973)
+
+
+Started GET "/weather/forecast" for ::1 at 2024-05-04 16:01:09 +0530
+Processing by WeatherController#forecast as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather" for ::1 at 2024-05-04 16:01:15 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather"):
+  
+Started GET "/" for ::1 at 2024-05-04 16:01:18 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 446)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1784)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2698)
+
+
+Started GET "/weather/forecast?zip_code=1001&commit=Get+Weather" for ::1 at 2024-05-04 16:01:22 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"1001", "commit"=>"Get Weather"}
+Completed 404 Not Found in 1262ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 864)
+
+
+Started GET "/weather/forecast?zip_code=1002&commit=Get+Weather" for ::1 at 2024-05-04 16:01:35 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"1002", "commit"=>"Get Weather"}
+Completed 404 Not Found in 1008ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 850)
+
+
+Started GET "/weather/forecast?zip_code=1002&commit=Get+Weather" for ::1 at 2024-05-04 16:01:56 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"1002", "commit"=>"Get Weather"}
+Completed 404 Not Found in 40596ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 33922)
+
+
+Started GET "/weather/forecast?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-04 16:02:42 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+Completed 200 OK in 7282ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 11343)
+
+
+Started GET "/weather/forecast?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-04 16:04:02 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+Completed 200 OK in 821ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1116)
+
+
+Started GET "/" for ::1 at 2024-05-04 16:05:51 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 483)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 1829)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Started GET "/weather/forecast?zip_code=10001" for ::1 at 2024-05-04 16:05:56 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 200 OK in 788ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1084)
+
+
+Started GET "/weather/forecast?zip_code=10002" for ::1 at 2024-05-04 16:06:05 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"10002"}
+Completed 200 OK in 1878ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 955)
+
+
+Started GET "/weather/forecast?zip_code=10002" for ::1 at 2024-05-04 16:06:07 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"10002"}
+Completed 200 OK in 2350ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 957)
+
+
+Started GET "/weather/forecast?zip_code=80001" for ::1 at 2024-05-04 16:06:34 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"80001"}
+Completed 200 OK in 1117ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 952)
+
+
+Started GET "/weather/forecast?zip_code=19701" for ::1 at 2024-05-04 16:06:55 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"19701"}
+Completed 200 OK in 1384ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 954)
+
+
+Started GET "/weather/forecast?zip_code=360007" for ::1 at 2024-05-04 16:07:24 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"360007"}
+Completed 404 Not Found in 1138ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 849)
+
+
+Started GET "/weather/forecast?zip_code=10001" for ::1 at 2024-05-04 17:57:12 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 200 OK in 1137ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 965)
+
+
+Started GET "/weather/forecast?zip_code=10001" for ::1 at 2024-05-04 17:57:14 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 200 OK in 1061ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 955)
+
+
+Started GET "/weather/forecast?zip_code=30001" for ::1 at 2024-05-04 17:57:20 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"30001"}
+Completed 404 Not Found in 783ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 849)
+
+
+Started GET "/weather/forecast?zip_code=3001" for ::1 at 2024-05-04 17:57:23 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"3001"}
+Completed 404 Not Found in 1339ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 851)
+
+
+Started GET "/weather/forecast?zip_code=3001" for ::1 at 2024-05-04 17:57:25 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"3001"}
+Completed 404 Not Found in 1024ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 852)
+
+
+Started GET "/weather/forecast?zip_code=20001" for ::1 at 2024-05-04 17:57:29 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"20001"}
+Completed 200 OK in 1088ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 963)
+
+
+Started GET "/weather/forecast?zip_code=2001" for ::1 at 2024-05-04 17:57:41 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"2001"}
+Completed 404 Not Found in 872ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 848)
+
+
+Started GET "/weather/index" for ::1 at 2024-05-04 18:19:01 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/forecast" for ::1 at 2024-05-04 18:19:13 +0530
+Processing by WeatherController#forecast as HTML
+Completed 422 Unprocessable Entity in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather/forecast?zip_code=10001" for ::1 at 2024-05-04 18:19:21 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"zip_code"=>"10001"}
+Completed 200 OK in 878ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 949)
+
+
+Started GET "/" for ::1 at 2024-05-04 18:19:33 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 1264)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 1486)
+
+
+Started GET "/weather/forecast?zip_code=10001" for ::1 at 2024-05-04 18:19:39 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 200 OK in 848ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 952)
+
+
+Started GET "/weather/forecast?zip_code=10001" for ::1 at 2024-05-04 18:19:41 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 200 OK in 834ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 955)
+
+
+Started GET "/" for ::1 at 2024-05-04 23:48:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/chiragmalviya/weather_forecast_app/app/controllers/weather_controller.rb:60: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/weather_controller.rb:60: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for ::1 at 2024-05-04 23:48:54 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2006)
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 20473)
+Completed 200 OK in 74ms (Views: 68.8ms | ActiveRecord: 0.0ms | Allocations: 23105)
+
+
+Started GET "/weather/forecast?address=Newyorkasnlsas%2C10001" for ::1 at 2024-05-04 23:49:16 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:49:27 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:49:28 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:49:30 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:51:33 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:51:34 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:52:26 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:52:29 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:52:34 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:52:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:53:23 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:53:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-04 23:55:26 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/forecast"):
+  
+Started GET "/" for ::1 at 2024-05-04 23:59:00 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 5602)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 5699)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 11743)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x0000000000aaf0>
+Did you mean?  for
+               fork):
+    3: 
+    4: <div id="weatherForm">
+    5: 	<%= form_with(url: '/weather', method: :get) do %>
+    6: 	  <%= form.label :address, "Enter Address with Zip Code:" %>
+    7: 	  <%= form.text_field :address, required: true %>
+    8: 	  <%= form.submit "Get Weather" %>
+    9: 	<% end %>
+  
+app/views/weather/index.html.erb:6
+app/views/weather/index.html.erb:5
+Started GET "/" for ::1 at 2024-05-05 00:00:38 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 475)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 18901)
+Completed 200 OK in 83ms (Views: 80.2ms | ActiveRecord: 0.0ms | Allocations: 19913)
+
+
+Started GET "/weather?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-05 00:00:42 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1228)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1492)
+
+
+Started GET "/weather?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-05 00:01:30 +0530
+Processing by WeatherController#index as HTML
+  Parameters: {"zip_code"=>"10001", "commit"=>"Get Weather"}
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 1802)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 2810)
+
+
+Started GET "/weather/index?zip_code=10001" for ::1 at 2024-05-05 00:01:32 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/index?zip_code=10001" for ::1 at 2024-05-05 00:01:32 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/index?zip_code=30001" for ::1 at 2024-05-05 00:01:44 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/index?zip_code=30001" for ::1 at 2024-05-05 00:01:45 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/index?zip_code=30001" for ::1 at 2024-05-05 00:02:01 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/index?zip_code=30001" for ::1 at 2024-05-05 00:02:02 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/index?zip_code=30001" for ::1 at 2024-05-05 00:02:12 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/index?zip_code=30001" for ::1 at 2024-05-05 00:02:13 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather/index?zip_code=30001" for ::1 at 2024-05-05 00:02:32 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/weather/index"):
+  
+Started GET "/weather?zip_code=10001&commit=Get+Weather" for ::1 at 2024-05-05 00:03:58 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/weather"):
+  
+Started GET "/" for ::1 at 2024-05-05 00:04:05 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 18889)
+Completed 200 OK in 69ms (Views: 62.3ms | ActiveRecord: 0.0ms | Allocations: 21431)
+
+
+Started GET "/weather/forecast?zip_code=10001" for ::1 at 2024-05-05 00:04:08 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 200 OK in 849ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1166)
+
+
+Started GET "/weather/forecast?zip_code=20001" for ::1 at 2024-05-05 00:04:14 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"20001"}
+Completed 200 OK in 1016ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 956)
+
+
+Started GET "/weather/forecast?zip_code=20001" for ::1 at 2024-05-05 00:04:15 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"20001"}
+Completed 200 OK in 789ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 954)
+
+
+Started GET "/weather/forecast?zip_code=20001" for ::1 at 2024-05-05 00:33:26 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"20001"}
+Completed 200 OK in 1001ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 957)
+
+
+Started GET "/weather/forecast?zip_code=20001" for ::1 at 2024-05-05 00:33:28 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"20001"}
+Completed 200 OK in 799ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 958)
+
+
+Started GET "/weather/forecast?zip_code=360007" for ::1 at 2024-05-05 00:33:41 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"360007"}
+Completed 404 Not Found in 1416ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 853)
+
+
+Started GET "/weather/forecast?zip_code=360007" for ::1 at 2024-05-05 00:33:42 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"zip_code"=>"360007"}
+Completed 404 Not Found in 1000ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 852)
+
+
+Started GET "/" for ::1 at 2024-05-05 01:02:23 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 450)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 20787)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 24571)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 01:02:46 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"pragati nagar,327001"}
+Error geocoding address: 401 Unauthorized
+Completed 422 Unprocessable Entity in 201ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 4051)
+
+
+Started GET "/" for ::1 at 2024-05-05 01:03:31 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1757)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 2534)
+
+
+Started GET "/weather/forecast?address=rajkot" for ::1 at 2024-05-05 01:03:44 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"rajkot"}
+Error fetching weather data: 401 Unauthorized
+Completed 200 OK in 2111ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2563)
+
+
+Started GET "/weather/forecast?address=rajkot%2C360007" for ::1 at 2024-05-05 01:03:58 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"rajkot,360007"}
+Error fetching weather data: 401 Unauthorized
+Completed 200 OK in 1750ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2549)
+
+
+Started GET "/weather/forecast?address=rajkot%2C360007" for ::1 at 2024-05-05 01:04:00 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"rajkot,360007"}
+Error fetching weather data: 401 Unauthorized
+Completed 200 OK in 1150ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2568)
+
+
+Started GET "/weather/forecast?address=rajkot%2C360007" for ::1 at 2024-05-05 01:04:25 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"rajkot,360007"}
+Error fetching weather data: 401 Unauthorized
+Completed 200 OK in 106802ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 127716)
+
+
+Started GET "/weather/forecast?address=rajkot%2C360007" for ::1 at 2024-05-05 01:07:16 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"rajkot,360007"}
+Error fetching weather data: 401 Unauthorized
+Completed 200 OK in 16778ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 52441)
+
+
+Started GET "/weather/forecast?address=rajkot%2C360007" for ::1 at 2024-05-05 01:07:44 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"rajkot,360007"}
+Error fetching weather data: 401 Unauthorized
+Error fetching weather data: 401 Unauthorized
+Completed 200 OK in 53684ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 21219)
+
+
+Started GET "/weather/forecast?address=rajkot%2C360007" for ::1 at 2024-05-05 01:08:40 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"rajkot,360007"}
+Completed 500 Internal Server Error in 3946ms (ActiveRecord: 0.0ms | Allocations: 17271)
+
+
+  
+NameError (undefined local variable or method `openweathermap_api_key' for #<WeatherController:0x0000000001ac20>):
+  
+app/controllers/weather_controller.rb:49:in `fetch_weather_data'
+app/controllers/weather_controller.rb:15:in `forecast'
+Started GET "/weather/forecast?address=rajkot%2C360007" for ::1 at 2024-05-05 01:10:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"rajkot,360007"}
+Completed 200 OK in 4361ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 44538)
+
+
+Started GET "/weather/forecast?address=Alap%20green%20city" for ::1 at 2024-05-05 01:11:21 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Alap green city"}
+Completed 200 OK in 8986ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 18291)
+
+
+Started GET "/weather/forecast?address=Alap%20green%20city" for ::1 at 2024-05-05 01:11:30 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Alap green city"}
+Completed 200 OK in 2846ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 18289)
+
+
+Started GET "/weather/forecast?address=pragati%20Nagar" for ::1 at 2024-05-05 01:12:20 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"pragati Nagar"}
+Completed 200 OK in 1346ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2230)
+
+
+Started GET "/weather/forecast?address=Bangalore" for ::1 at 2024-05-05 01:12:34 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Bangalore"}
+Completed 200 OK in 1610ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2278)
+
+
+Started GET "/weather/forecast?address=Mumbai" for ::1 at 2024-05-05 01:12:44 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Mumbai"}
+Completed 200 OK in 1693ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2194)
+
+
+Started GET "/weather/forecast?address=Mumbai%2C327001" for ::1 at 2024-05-05 01:13:16 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Mumbai,327001"}
+Completed 200 OK in 1349ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2265)
+
+
+Started GET "/weather/forecast?address=Mumbai%2C327001" for ::1 at 2024-05-05 01:13:17 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Mumbai,327001"}
+Completed 200 OK in 1470ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2267)
+
+
+Started GET "/weather/forecast?address=Mumbai" for ::1 at 2024-05-05 01:13:27 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Mumbai"}
+Completed 200 OK in 1192ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2217)
+
+
+Started GET "/weather/forecast?address=Mumbai" for ::1 at 2024-05-05 01:13:29 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Mumbai"}
+Completed 200 OK in 1190ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2214)
+
+
+Started GET "/weather/forecast?address=Mumbai" for ::1 at 2024-05-05 01:13:30 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Mumbai"}
+Completed 200 OK in 1175ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2211)
+
+
+Started GET "/weather/forecast?address=Mumbai" for ::1 at 2024-05-05 01:13:33 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Mumbai"}
+Completed 200 OK in 1199ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 2218)
+
+
+Started GET "/weather/forecast?address=Mumbai" for ::1 at 2024-05-05 01:14:00 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Mumbai"}
+Started GET "/weather/forecast?address=New%20york" for ::1 at 2024-05-05 01:14:49 +0530
+Completed 200 OK in 58765ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 21390)
+
+
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"New york"}
+Completed 200 OK in 3110ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 15031)
+
+
+Started GET "/weather/forecast?address=califoina" for ::1 at 2024-05-05 01:15:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"califoina"}
+Completed 200 OK in 4778ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 41201)
+
+
+Started GET "/weather/forecast?address=san%20francisco" for ::1 at 2024-05-05 01:15:42 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"san francisco"}
+Completed 200 OK in 5245ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 14956)
+
+
+Started GET "/weather/forecast?address=delhi" for ::1 at 2024-05-05 01:16:01 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"delhi"}
+Completed 200 OK in 6601ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 14919)
+
+
+Started GET "/weather/forecast?address=xyz" for ::1 at 2024-05-05 01:16:24 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"xyz"}
+Completed 200 OK in 1421ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2274)
+
+
+Started GET "/weather/forecast?address=Akme%20Ballet%2C560037" for ::1 at 2024-05-05 01:18:03 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme Ballet,560037"}
+Completed 200 OK in 1418ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2227)
+
+
+Started GET "/weather/forecast?address=Royal%20Castle%2C560008" for ::1 at 2024-05-05 01:18:25 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Royal Castle,560008"}
+Completed 200 OK in 1765ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2193)
+
+
+Started GET "/weather/forecast?address=560008" for ::1 at 2024-05-05 01:18:56 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"560008"}
+Completed 200 OK in 1562ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1944)
+
+
+Started GET "/weather/forecast?address=Royal%20castle%20Apartments%2C%20560008" for ::1 at 2024-05-05 01:19:14 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Royal castle Apartments, 560008"}
+Completed 200 OK in 1448ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2199)
+
+
+Started GET "/weather/forecast?address=Royal%20castle%20Apartments%2C%20560008" for ::1 at 2024-05-05 01:33:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Royal castle Apartments, 560008"}
+Error fetching extended forecast data: 401 Unauthorized
+Completed 200 OK in 2296ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 5116)
+
+
+Started GET "/weather/forecast?address=bangalore" for ::1 at 2024-05-05 01:33:17 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bangalore"}
+Error fetching extended forecast data: 401 Unauthorized
+Completed 200 OK in 2484ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/weather/forecast?address=bangalore" for ::1 at 2024-05-05 01:34:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bangalore"}
+Error fetching extended forecast data: 401 Unauthorized
+Completed 200 OK in 15068ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 58494)
+
+
+Started GET "/weather/forecast?address=bangalore" for ::1 at 2024-05-05 01:36:07 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bangalore"}
+Error fetching extended forecast data: 401 Unauthorized
+Completed 200 OK in 111569ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 25296)
+
+
+Started GET "/weather/forecast?address=bangalore" for ::1 at 2024-05-05 01:38:59 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bangalore"}
+Completed 200 OK in 1340ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2318)
+
+
+Started GET "/weather/forecast?address=bangalore" for ::1 at 2024-05-05 01:39:06 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bangalore"}
+Completed 200 OK in 1039ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2313)
+
+
+Started GET "/" for ::1 at 2024-05-05 01:39:10 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 519)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 20949)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms | Allocations: 23176)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 01:39:14 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"pragati nagar,327001"}
+Completed 200 OK in 1660ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2243)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 01:40:55 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"pragati nagar,327001"}
+Completed 200 OK in 1228ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2262)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 01:40:57 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"pragati nagar,327001"}
+Completed 200 OK in 839ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2262)
+
+
+Started GET "/weather/forecast?address=bagalore" for ::1 at 2024-05-05 01:41:18 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bagalore"}
+Completed 200 OK in 1483ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2314)
+
+
+Started GET "/weather/forecast?address=bagalore" for ::1 at 2024-05-05 01:42:10 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bagalore"}
+Completed 200 OK in 1221ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2309)
+
+
+Started GET "/weather/forecast?address=bagalore" for ::1 at 2024-05-05 01:42:15 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bagalore"}
+Completed 200 OK in 829ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2297)
+
+
+Started GET "/weather/forecast?address=bagalore" for ::1 at 2024-05-05 01:42:16 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bagalore"}
+Completed 200 OK in 1124ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2302)
+
+
+Started GET "/weather/forecast?address=bagalore" for ::1 at 2024-05-05 01:44:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bagalore"}
+Completed 200 OK in 1098ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 4116)
+
+
+Started GET "/weather/forecast?address=bagalore" for ::1 at 2024-05-05 01:45:04 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bagalore"}
+Completed 200 OK in 44687ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 52297)
+
+
+Started GET "/weather/forecast?address=bagalore" for ::1 at 2024-05-05 01:45:51 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bagalore"}
+Started GET "/" for ::1 at 2024-05-05 01:46:06 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 447)
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 18765)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms | Allocations: 20994)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 01:46:09 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"pragati nagar,327001"}
+Completed 200 OK in 6081ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 14540)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 01:46:19 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"pragati nagar,327001"}
+Completed 200 OK in 3004ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 14512)
+
+
+Started GET "/weather/forecast?address=bangalore" for ::1 at 2024-05-05 01:46:31 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"bangalore"}
+Completed 200 OK in 5285ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 14561)
+
+
+Started GET "/" for ::1 at 2024-05-05 01:46:48 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 6481)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms | Allocations: 6703)
+
+
+Started GET "/weather/forecast?address=akme%20ballet" for ::1 at 2024-05-05 01:46:54 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"akme ballet"}
+Completed 200 OK in 3400ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 14449)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C560037" for ::1 at 2024-05-05 01:50:59 +0530
+Completed 200 OK in 330615ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 125290)
+
+
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet,560037"}
+Completed 200 OK in 1102621ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 166484)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C560037" for ::1 at 2024-05-05 02:10:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet,560037"}
+Completed 200 OK in 90584ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 56841)
+
+
+Started GET "/weather/forecast?address=66666" for ::1 at 2024-05-05 02:12:29 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"66666"}
+Completed 200 OK in 1457ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2208)
+
+
+Started GET "/weather/forecast?address=akme%20ballet%205600037" for ::1 at 2024-05-05 02:13:38 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"akme ballet 5600037"}
+Completed 200 OK in 1637ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2257)
+
+
+Started GET "/weather/forecast?address=akme%20ballet%2C5600037" for ::1 at 2024-05-05 02:13:57 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"akme ballet,5600037"}
+Completed 200 OK in 1531ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2233)
+
+
+Started GET "/weather/forecast?address=akme%20ballet%2C5600037" for ::1 at 2024-05-05 02:14:02 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"akme ballet,5600037"}
+Completed 200 OK in 1099ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2262)
+
+
+Started GET "/" for ::1 at 2024-05-05 02:14:07 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 447)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 20879)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.0ms | Allocations: 23109)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C5600037" for ::1 at 2024-05-05 02:14:25 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet,5600037"}
+Completed 200 OK in 1456ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 2232)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C5600037" for ::1 at 2024-05-05 02:14:27 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet,5600037"}
+Completed 200 OK in 1626ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2230)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C560037" for ::1 at 2024-05-05 02:14:31 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet,560037"}
+Completed 200 OK in 1368ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2248)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:14:40 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1502ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2231)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:14:46 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1175ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2255)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:31:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2545)
+
+
+  
+NoMethodError (undefined method `first' for #<MatchData "560037">):
+  
+app/controllers/weather_controller.rb:78:in `extract_zip_code'
+app/controllers/weather_controller.rb:8:in `forecast'
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:31:37 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 500 Internal Server Error in 30417ms (ActiveRecord: 0.0ms | Allocations: 51631)
+
+
+  
+NoMethodError (undefined method `first' for #<MatchData "560037">):
+  
+app/controllers/weather_controller.rb:79:in `extract_zip_code'
+app/controllers/weather_controller.rb:8:in `forecast'
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:32:30 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1213ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 2700)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:32:37 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1213ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2364)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:32:45 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1062ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2363)
+
+
+Started GET "/weather/forecast?address=Banswara%2C327001" for ::1 at 2024-05-05 02:33:03 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Banswara,327001"}
+Completed 200 OK in 1684ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2331)
+
+
+Started GET "/weather/forecast?address=Banswara%2C327001" for ::1 at 2024-05-05 02:33:07 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Banswara,327001"}
+Completed 200 OK in 1143ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2355)
+
+
+Started GET "/weather/forecast?address=Banswara%20327001" for ::1 at 2024-05-05 02:33:21 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Banswara 327001"}
+Completed 200 OK in 1345ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2344)
+
+
+Started GET "/weather/forecast?address=Banswara%20327001" for ::1 at 2024-05-05 02:33:25 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Banswara 327001"}
+Completed 200 OK in 847ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2351)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:40:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 2156ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 4236)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:41:19 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1094ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2363)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:41:46 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 56476ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 45491)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:43:02 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 7087ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 18045)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:43:13 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 4368ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 18092)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:54:10 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 894ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 2371)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:54:14 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 906ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2363)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:54:18 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1063ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2365)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 02:54:39 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 304535ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 23640)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:01:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 871ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 4233)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:06:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1198ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 4229)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:07:03 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1159ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2366)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:07:08 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1145ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2364)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:07:20 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1195ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2362)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:08:57 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1130ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2361)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:08:58 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1062ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2362)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:08:59 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1197ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2361)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:09:01 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1138ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2367)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:09:02 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1104ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2363)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:09:03 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1160ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2362)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:09:04 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1117ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2364)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:09:05 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1095ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2359)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:09:06 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 840ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2366)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:19:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 1272ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 4267)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:20:04 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:20:07 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:20:23 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 15392ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 47703)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:26:20 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 323)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20560037" for ::1 at 2024-05-05 03:26:31 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 560037"}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 322)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2056003" for ::1 at 2024-05-05 03:26:40 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 56003"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 103)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%20327001" for ::1 at 2024-05-05 03:26:52 +0530
+Processing by WeatherController#forecast as */*
+  Parameters: {"address"=>"Akme ballet 327001"}
+Completed 200 OK in 1629ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2410)
+
+
+Started GET "/" for ::1 at 2024-05-05 03:28:13 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 84.8ms | Allocations: 21004)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.0ms | Allocations: 23235)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C560037" for ::1 at 2024-05-05 03:28:20 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme ballet,560037"}
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/weather/forecast?address=Banswara%2C327001" for ::1 at 2024-05-05 03:28:38 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Banswara,327001"}
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 321)
+
+
+Started GET "/weather/forecast?address=Banswara%2C327001" for ::1 at 2024-05-05 03:28:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Banswara,327001"}
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 321)
+
+
+Started GET "/weather/forecast?address=gujarat" for ::1 at 2024-05-05 03:28:52 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380001" for ::1 at 2024-05-05 03:29:12 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380001"}
+Completed 200 OK in 1567ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2394)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380001" for ::1 at 2024-05-05 03:29:13 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380001"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380001" for ::1 at 2024-05-05 03:29:16 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380001"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380001" for ::1 at 2024-05-05 03:29:16 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380001"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380002" for ::1 at 2024-05-05 03:29:30 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380002"}
+Completed 200 OK in 1620ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2429)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380003" for ::1 at 2024-05-05 03:29:36 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380003"}
+Completed 200 OK in 1635ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2391)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:29:42 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 1449ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2394)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380001" for ::1 at 2024-05-05 03:29:48 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380001"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:29:51 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:29:53 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:30:42 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 1177ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2419)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:30:44 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:30:45 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:30:55 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:30:57 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 03:31:13 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=gujarat%2C380004" for ::1 at 2024-05-05 13:32:56 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat,380004"}
+Completed 200 OK in 5112ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2430)
+
+
+Started GET "/weather/forecast?address=gujarat" for ::1 at 2024-05-05 13:33:14 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"gujarat"}
+Completed 422 Unprocessable Entity in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=Akme%20Ballet%2C%205600037" for ::1 at 2024-05-05 13:33:56 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme Ballet, 5600037"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=Akme%20Ballet%2C%205600037" for ::1 at 2024-05-05 13:34:00 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme Ballet, 5600037"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=Akme%20Ballet%2C%20560037" for ::1 at 2024-05-05 13:34:04 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme Ballet, 560037"}
+Completed 200 OK in 1864ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 2401)
+
+
+Started GET "/weather/forecast?address=Akme%20Ballet%2C%20560037" for ::1 at 2024-05-05 13:34:06 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme Ballet, 560037"}
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=Akme%20Ballet%2C%20560037" for ::1 at 2024-05-05 13:34:06 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme Ballet, 560037"}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar" for ::1 at 2024-05-05 13:34:31 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"pragati nagar"}
+Completed 422 Unprocessable Entity in 5ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C5600037" for ::1 at 2024-05-05 13:34:42 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme ballet,5600037"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C560037" for ::1 at 2024-05-05 13:34:46 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme ballet,560037"}
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=aalap%20green%20city" for ::1 at 2024-05-05 13:35:03 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"aalap green city"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=aalap%20green%20city%2C%20360007" for ::1 at 2024-05-05 13:35:08 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"aalap green city, 360007"}
+Completed 200 OK in 2697ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2425)
+
+
+Started GET "/weather/forecast?address=aalap%20green%20city%2C%20360007" for ::1 at 2024-05-05 13:35:11 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"aalap green city, 360007"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=ahmebdad%2C%20380001" for ::1 at 2024-05-05 13:35:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"ahmebdad, 380001"}
+Completed 200 OK in 1385ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2122)
+
+
+Started GET "/weather/forecast?address=ahmebdad%2C%20380002" for ::1 at 2024-05-05 13:35:49 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"ahmebdad, 380002"}
+Completed 200 OK in 1371ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2186)
+
+
+Started GET "/weather/forecast?address=ahmebdad%2C%20380002" for ::1 at 2024-05-05 13:35:52 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"ahmebdad, 380002"}
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=ahmebdad%2C%20380001" for ::1 at 2024-05-05 13:35:56 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"ahmebdad, 380001"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=ahmebdad%2C%20380001" for ::1 at 2024-05-05 13:35:57 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"ahmebdad, 380001"}
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=380002" for ::1 at 2024-05-05 13:36:10 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"380002"}
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=380002" for ::1 at 2024-05-05 13:36:12 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"380002"}
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=380003" for ::1 at 2024-05-05 13:36:14 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"380003"}
+Completed 200 OK in 3988ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2105)
+
+
+Started GET "/weather/forecast?address=380003" for ::1 at 2024-05-05 13:36:18 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"380003"}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/weather/forecast?address=363610" for ::1 at 2024-05-05 13:36:29 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"363610"}
+Completed 200 OK in 3257ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2129)
+
+
+Started GET "/weather/forecast?address=363610" for ::1 at 2024-05-05 13:36:41 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"363610"}
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 331)
+
+
+Started GET "/weather/forecast?address=363610" for ::1 at 2024-05-05 13:36:46 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"363610"}
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 330)
+
+
+Started GET "/weather/forecast?address=96598" for ::1 at 2024-05-05 13:37:31 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"96598"}
+Completed 422 Unprocessable Entity in 7ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=96598" for ::1 at 2024-05-05 13:37:34 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"96598"}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=99703" for ::1 at 2024-05-05 13:38:32 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"99703"}
+Completed 422 Unprocessable Entity in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=%20Fairbanks,%20Alaska" for ::1 at 2024-05-05 13:38:46 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>" Fairbanks, Alaska"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=%20Fairbanks,%20Alaska%20,%2099703" for ::1 at 2024-05-05 13:38:58 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>" Fairbanks, Alaska , 99703"}
+Completed 422 Unprocessable Entity in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=99703" for ::1 at 2024-05-05 13:39:03 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"99703"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=06001" for ::1 at 2024-05-05 13:39:29 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"06001"}
+Completed 422 Unprocessable Entity in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=19701" for ::1 at 2024-05-05 13:40:07 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"19701"}
+Completed 422 Unprocessable Entity in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/weather/forecast?address=19701" for ::1 at 2024-05-05 13:40:36 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"19701"}
+Completed 200 OK in 167030ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 35292)
+
+
+Started GET "/" for ::1 at 2024-05-05 13:44:51 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 1913)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms | Allocations: 2691)
+
+
+Started GET "/weather/forecast?address=royal%20castle%20appartments%2C%20560008" for ::1 at 2024-05-05 13:45:19 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"royal castle appartments, 560008"}
+Completed 200 OK in 2274ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2396)
+
+
+Started GET "/weather/forecast?address=royal%20castle%20appartments%2C%20560008" for ::1 at 2024-05-05 13:45:21 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"royal castle appartments, 560008"}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/weather/forecast?address=560008" for ::1 at 2024-05-05 13:45:32 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560008"}
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/weather/forecast?address=560008" for ::1 at 2024-05-05 13:45:34 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560008"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/weather/forecast?address=560008" for ::1 at 2024-05-05 13:45:34 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560008"}
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/weather/forecast?address=560008" for ::1 at 2024-05-05 13:45:34 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560008"}
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/weather/forecast?address=560008" for ::1 at 2024-05-05 13:45:35 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560008"}
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/weather/forecast?address=560001" for ::1 at 2024-05-05 13:45:39 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560001"}
+Completed 200 OK in 1917ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2113)
+
+
+Started GET "/weather/forecast?address=560001" for ::1 at 2024-05-05 13:45:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560001"}
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/weather/forecast?address=532001" for ::1 at 2024-05-05 13:45:49 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"532001"}
+Completed 200 OK in 1607ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2116)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 13:45:56 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 147ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1198)
+
+
+Started GET "/weather/forecast?address=123456" for ::1 at 2024-05-05 13:46:45 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"123456"}
+Completed 422 Unprocessable Entity in 153ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1200)
+
+
+Started GET "/weather/forecast?address=560006" for ::1 at 2024-05-05 13:46:53 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560006"}
+Completed 200 OK in 1727ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 2114)
+
+
+Started GET "/weather/forecast?address=560006" for ::1 at 2024-05-05 13:46:55 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560006"}
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/weather/forecast?address=560003" for ::1 at 2024-05-05 13:47:04 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560003"}
+Completed 200 OK in 2098ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2165)
+
+
+Started GET "/weather/forecast?address=560003" for ::1 at 2024-05-05 13:48:31 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560003"}
+Completed 200 OK in 25ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/weather/forecast?address=560037" for ::1 at 2024-05-05 13:50:00 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560037"}
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/weather/forecast?address=Akme%20Ballet,%20360007" for ::1 at 2024-05-05 13:56:09 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme Ballet, 360007"}
+Completed 200 OK in 18ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 330)
+
+
+Started GET "/weather/forecast?address=Akme%20Ballet,%20560037" for ::1 at 2024-05-05 13:56:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme Ballet, 560037"}
+Completed 200 OK in 16ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 13:56:50 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 102ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1228)
+
+
+Started GET "/weather/forecast?address=123456" for ::1 at 2024-05-05 13:57:01 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"123456"}
+Completed 422 Unprocessable Entity in 100ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1226)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar" for ::1 at 2024-05-05 13:57:10 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"pragati nagar"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=%3Calert%3E123%3C/alert%3E" for ::1 at 2024-05-05 13:57:47 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"<alert>123</alert>"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=%3Calert%3E560007%3C/alert%3E" for ::1 at 2024-05-05 13:58:03 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"<alert>560007</alert>"}
+Completed 200 OK in 1354ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2464)
+
+
+Started GET "/weather/forecast?address=%3Calert%3E560007%3C/alert%3E" for ::1 at 2024-05-05 13:58:30 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"<alert>560007</alert>"}
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/weather/forecast?address=%3Calert%3E560007%3C/alert%3E" for ::1 at 2024-05-05 14:53:35 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"<alert>560007</alert>"}
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms | Allocations: 2437)
+
+
+  
+NameError (uninitialized constant WeatherController::GeoCodeService
+Did you mean?  GeocodeService):
+  
+app/controllers/weather_controller.rb:72:in `retrieve_cached_weather'
+app/controllers/weather_controller.rb:10:in `forecast'
+Started GET "/weather/forecast?address=%3Calert%3E560007%3C/alert%3E" for ::1 at 2024-05-05 14:54:18 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"<alert>560007</alert>"}
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 731)
+
+
+  
+Zeitwerk::NameError (expected file /Users/chiragmalviya/weather_forecast_app/app/services/geocode_service.rb to define constant GeocodeService, but didn't):
+  
+app/controllers/weather_controller.rb:72:in `retrieve_cached_weather'
+app/controllers/weather_controller.rb:10:in `forecast'
+Started GET "/weather/forecast?address=560007" for ::1 at 2024-05-05 14:54:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560007"}
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms | Allocations: 2476)
+
+
+  
+NameError (uninitialized constant WeatherController::GeocodeService
+Did you mean?  GeoCodeService):
+  
+app/controllers/weather_controller.rb:72:in `retrieve_cached_weather'
+app/controllers/weather_controller.rb:10:in `forecast'
+Started GET "/weather/forecast?address=560007" for ::1 at 2024-05-05 14:55:06 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560007"}
+Completed 200 OK in 2066ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2516)
+
+
+Started GET "/weather/forecast?address=560007" for ::1 at 2024-05-05 14:56:27 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560007"}
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 14:56:37 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 1979ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2410)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 15:03:02 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 21558ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 20412)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 15:09:07 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 118ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1415)
+
+
+Started GET "/weather/forecast?address=560037" for ::1 at 2024-05-05 15:21:11 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560037"}
+Completed 200 OK in 2213ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2537)
+
+
+Started GET "/weather/forecast?address=560037" for ::1 at 2024-05-05 15:21:15 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"560037"}
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 378)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 15:21:20 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 15:22:06 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 111)
+
+
+Started GET "/weather/forecast?address=8999999" for ::1 at 2024-05-05 15:22:11 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"8999999"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=8999999" for ::1 at 2024-05-05 15:22:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"8999999"}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1654)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:22:49 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2735)
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 20859)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms | Allocations: 23180)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 15:22:53 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 114ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 3448)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 15:23:41 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 96ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1434)
+
+
+Started GET "/weather/forecast?address=1000000000" for ::1 at 2024-05-05 15:23:46 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"1000000000"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=1000000000" for ::1 at 2024-05-05 15:24:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"1000000000"}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1654)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:25:47 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 114.6ms | Allocations: 20715)
+Completed 200 OK in 134ms (Views: 130.9ms | ActiveRecord: 0.0ms | Allocations: 23043)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 15:25:52 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 15:29:05 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 7291ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 4718)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 15:29:13 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 27ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 400)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 15:29:39 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 391)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:29:44 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 841)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2086)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 2983)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 15:29:50 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 382)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 15:30:29 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 391)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 15:30:37 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 383)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:35:02 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 775)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 1914)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 2787)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 15:35:06 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 15:39:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1654)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:40:01 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2757)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 20979)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms | Allocations: 23301)
+
+
+Started GET "/weather/forecast?address=99999999999" for ::1 at 2024-05-05 15:40:05 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"99999999999"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=99999999999" for ::1 at 2024-05-05 15:40:24 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"99999999999"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:40:27 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 763)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 1902)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 2765)
+
+
+Started GET "/weather/forecast?address=888888888888" for ::1 at 2024-05-05 15:40:32 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"888888888888"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=888888888888" for ::1 at 2024-05-05 15:41:07 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"888888888888"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:41:09 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1906)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 2770)
+
+
+Started GET "/weather/forecast?address=7777777" for ::1 at 2024-05-05 15:41:13 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"7777777"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:42:57 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 750)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1889)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 2760)
+
+
+Started GET "/weather/forecast?address=555555" for ::1 at 2024-05-05 15:43:01 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"555555"}
+Completed 404 Not Found in 397ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 3425)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 15:43:32 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 200 OK in 139ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1432)
+
+
+Started GET "/weather/forecast?address=555555" for ::1 at 2024-05-05 15:44:02 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"555555"}
+Completed 200 OK in 85ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1417)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:44:07 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 833)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2078)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 2974)
+
+
+Started GET "/weather/forecast?address=8888888888" for ::1 at 2024-05-05 15:44:17 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"8888888888"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=8888888888" for ::1 at 2024-05-05 15:52:53 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"8888888888"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started GET "/weather/forecast?address=66666666" for ::1 at 2024-05-05 15:53:07 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"66666666"}
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 15:54:20 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 200 OK in 43645ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 86469)
+
+
+Started GET "/weather/forecast?address=99999" for ::1 at 2024-05-05 15:56:00 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"99999"}
+Completed 200 OK in 84751ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 96605)
+
+
+Started GET "/" for ::1 at 2024-05-05 15:57:32 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1906)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 2779)
+
+
+Started GET "/weather/forecast?address=88888" for ::1 at 2024-05-05 15:57:37 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"88888"}
+Completed 200 OK in 20905ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 30586)
+
+
+Started GET "/weather/forecast?address=1111111111" for ::1 at 2024-05-05 15:58:24 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"1111111111"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 109)
+
+
+Started GET "/weather/forecast?address=777777777" for ::1 at 2024-05-05 15:58:33 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"777777777"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 15:58:37 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 15:58:38 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 15:59:36 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 109)
+
+
+Started GET "/weather/forecast?address=111111" for ::1 at 2024-05-05 15:59:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"111111"}
+Completed 200 OK in 17639ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 18112)
+
+
+Started GET "/weather/forecast?address=111111" for ::1 at 2024-05-05 15:59:58 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"111111"}
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 378)
+
+
+Started GET "/weather/forecast?address=111111" for ::1 at 2024-05-05 15:59:58 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"111111"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 378)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 16:16:29 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms | Allocations: 2820)
+
+
+  
+NoMethodError (undefined method `ensure_params' for #<WeatherController:0x00000000031e70>):
+  
+app/controllers/weather_controller.rb:4:in `forecast'
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 16:16:53 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 94ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1522)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:20:10 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 776)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 1922)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 2794)
+
+
+Started GET "/weather/forecast?address=99999999" for ::1 at 2024-05-05 16:20:19 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"99999999"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:21:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 2759)
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | Allocations: 20775)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.0ms | Allocations: 24641)
+
+
+Started GET "/weather/forecast?address=999999999" for ::1 at 2024-05-05 16:21:19 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999999"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 103)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:21:42 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 765)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1911)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 2786)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 16:21:46 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:22:23 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 1924)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 2799)
+
+
+Started GET "/weather/forecast?address=99999999" for ::1 at 2024-05-05 16:22:28 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"99999999"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:23:28 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 1920)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 2793)
+
+
+Started GET "/weather/forecast?address=555555555" for ::1 at 2024-05-05 16:23:34 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"555555555"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:24:11 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 747)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1886)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2757)
+
+
+Started GET "/weather/forecast?address=53553526273" for ::1 at 2024-05-05 16:24:15 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"53553526273"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=akme%20ballet" for ::1 at 2024-05-05 16:24:20 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"akme ballet"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=%3C%2Falert%3E%2Fsdfds" for ::1 at 2024-05-05 16:24:31 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"</alert>/sdfds"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 111)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 16:25:13 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"pragati nagar,327001"}
+Completed 200 OK in 6825ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 7520)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 16:25:26 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"pragati nagar,327001"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 404)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:35:37 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1079)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 2331)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 3238)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:36:40 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1001)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2140)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 3013)
+
+
+Started GET "/weather/forecast?address=1213123" for ::1 at 2024-05-05 16:36:44 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"1213123"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:37:45 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1001)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2147)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 3020)
+
+
+Started GET "/weather/forecast?address=pragati%20nagar%2C327001" for ::1 at 2024-05-05 16:37:49 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"pragati nagar,327001"}
+Completed 200 OK in 19ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 405)
+
+
+Started GET "/weather/forecast?address=9999999" for ::1 at 2024-05-05 16:37:55 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"9999999"}
+Completed 422 Unprocessable Entity in 15ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=akme%20ballet" for ::1 at 2024-05-05 16:38:02 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"akme ballet"}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C5600037" for ::1 at 2024-05-05 16:38:08 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme ballet,5600037"}
+Completed 422 Unprocessable Entity in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=aalap%20green%20city%2C%20360004" for ::1 at 2024-05-05 16:38:22 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"aalap green city, 360004"}
+Completed 200 OK in 2447ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 5410)
+
+
+Started GET "/" for ::1 at 2024-05-05 16:40:01 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1002)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2141)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 3012)
+
+
+Started GET "/weather/forecast?address=Akme%20ballet%2C5600037" for ::1 at 2024-05-05 16:40:06 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Akme ballet,5600037"}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=Aalap%20green%20city%2C%20360003" for ::1 at 2024-05-05 16:40:17 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Aalap green city, 360003"}
+Completed 200 OK in 2157ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2865)
+
+
+Started GET "/weather/forecast?address=Aalap%20green%20city%2C%20360003" for ::1 at 2024-05-05 16:53:26 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"Aalap green city, 360003"}
+Completed 200 OK in 16ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 388)
+
+
+Started GET "/weather/forecast?address=89001" for ::1 at 2024-05-05 16:53:39 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"89001"}
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.0ms | Allocations: 2535)
+
+
+  
+SyntaxError (/Users/chiragmalviya/weather_forecast_app/app/services/weather_service.rb:7: dynamic constant assignment
+    OPENWEATHERMAP_API_TIMEOUT = 1
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+):
+  
+app/services/weather_service.rb:7: dynamic constant assignment
+app/controllers/weather_controller.rb:36:in `retrieve_cached_weather'
+app/controllers/weather_controller.rb:7:in `forecast'
+Started GET "/weather/forecast?address=89001" for ::1 at 2024-05-05 16:53:55 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"89001"}
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.0ms | Allocations: 2326)
+
+
+  
+SyntaxError (/Users/chiragmalviya/weather_forecast_app/app/services/weather_service.rb:7: dynamic constant assignment
+    OPENWEATHERMAP_API_TIMEOUT = 1
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+):
+  
+app/services/weather_service.rb:7: dynamic constant assignment
+app/controllers/weather_controller.rb:36:in `retrieve_cached_weather'
+app/controllers/weather_controller.rb:7:in `forecast'
+Started GET "/weather/forecast?address=89001" for ::1 at 2024-05-05 16:54:36 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"89001"}
+Completed 500 Internal Server Error in 17532ms (ActiveRecord: 0.0ms | Allocations: 46819)
+
+
+  
+SyntaxError (/Users/chiragmalviya/weather_forecast_app/app/services/weather_service.rb:7: dynamic constant assignment
+    OPENWEATHERMAP_API_TIMEOUT = 1
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+):
+  
+app/services/weather_service.rb:7: dynamic constant assignment
+app/controllers/weather_controller.rb:37:in `retrieve_cached_weather'
+app/controllers/weather_controller.rb:7:in `forecast'
+Started GET "/weather/forecast?address=89001" for ::1 at 2024-05-05 16:55:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"89001"}
+Completed 200 OK in 12439ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 20362)
+
+
+Started GET "/weather/forecast?address=89001" for ::1 at 2024-05-05 16:56:22 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"89001"}
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 411)
+
+
+Started GET "/weather/forecast?address=899999999" for ::1 at 2024-05-05 16:56:28 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"899999999"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=78484843" for ::1 at 2024-05-05 16:56:35 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"78484843"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=56989" for ::1 at 2024-05-05 16:56:40 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"56989"}
+Completed 200 OK in 26972ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 43527)
+
+
+Started GET "/weather/forecast?address=56989" for ::1 at 2024-05-05 16:57:54 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"56989"}
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Started GET "/weather/forecast?address=78989" for ::1 at 2024-05-05 16:57:59 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"78989"}
+Completed 200 OK in 38708ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 57296)
+
+
+Started GET "/weather/forecast?address=78989" for ::1 at 2024-05-05 16:58:58 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"78989"}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Started GET "/weather/forecast?address=78578" for ::1 at 2024-05-05 16:59:04 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"78578"}
+Timeout error: The API request timed out after 0.001 seconds.
+HTTP error: 400 Bad Request
+Timeout error: The API request timed out after 0.001 seconds.
+Completed 200 OK in 17678ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 26915)
+
+
+Started GET "/weather/forecast?address=78578" for ::1 at 2024-05-05 17:00:02 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"78578"}
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/weather/forecast?address=785789" for ::1 at 2024-05-05 17:00:08 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"785789"}
+Timeout error: The API request timed out after 0.001 seconds.
+API request timed out after 1 seconds.
+Completed 200 OK in 5869ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 19095)
+
+
+Started GET "/weather/forecast?address=785789" for ::1 at 2024-05-05 17:01:13 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"785789"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/weather/forecast?address=7857899" for ::1 at 2024-05-05 17:01:20 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"7857899"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=78657" for ::1 at 2024-05-05 17:01:28 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"78657"}
+Timeout error: The API request timed out after 0.001 seconds.
+HTTP error: 400 Bad Request
+Completed 200 OK in 1271ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2401)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 17:02:28 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Timeout error: The API request timed out after 0.001 seconds.
+HTTP error: 400 Bad Request
+Completed 200 OK in 1707ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2347)
+
+
+Started GET "/weather/forecast?address=78657" for ::1 at 2024-05-05 17:03:15 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"78657"}
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 290)
+
+
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:03:25 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Timeout error: The API request timed out after 0.001 seconds.
+Timeout error: The API request timed out after 0.001 seconds.
+Timeout error: The API request timed out after 0.001 seconds.
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:32:46 +0530
+HTTP error: 400 Bad Request
+Completed 200 OK in 1774331ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 35126)
+
+
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/" for ::1 at 2024-05-05 17:33:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2952)
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 21225)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.0ms | Allocations: 25093)
+
+
+Started GET "/weather/forecast?address=444444" for ::1 at 2024-05-05 17:33:15 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"444444"}
+Completed 422 Unprocessable Entity in 272ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 3561)
+
+
+Started GET "/weather/forecast?address=4444499" for ::1 at 2024-05-05 17:33:25 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"4444499"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 118)
+
+
+Started GET "/weather/forecast?address=34554" for ::1 at 2024-05-05 17:33:30 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"34554"}
+Completed 200 OK in 50286ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 68023)
+
+
+Started GET "/weather/forecast?address=34554" for ::1 at 2024-05-05 17:34:34 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"34554"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/weather/forecast?address=33333" for ::1 at 2024-05-05 17:34:42 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"33333"}
+API request timed out after 1 seconds.
+Completed 200 OK in 306ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2722)
+
+
+Started GET "/weather/forecast?address=3333" for ::1 at 2024-05-05 17:34:46 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"3333"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/weather/forecast?address=33333" for ::1 at 2024-05-05 17:34:49 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"33333"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/weather/forecast?address=33333" for ::1 at 2024-05-05 17:35:03 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"33333"}
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/weather/forecast?address=33333" for ::1 at 2024-05-05 17:35:13 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"33333"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:35:21 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:35:25 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:35:43 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:35:44 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:44:52 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 337)
+
+
+Started GET "/" for ::1 at 2024-05-05 17:44:57 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 1063)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 2315)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms | Allocations: 3212)
+
+
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:45:03 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 338)
+
+
+Started GET "/weather/forecast?address=44444" for ::1 at 2024-05-05 17:46:19 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"44444"}
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 338)
+
+
+Started GET "/" for ::1 at 2024-05-05 17:46:38 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2120)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 2983)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 17:46:43 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+API request timed out after 1 seconds.
+Completed 422 Unprocessable Entity in 113ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2509)
+
+
+Started GET "/weather/forecast?address=327001" for ::1 at 2024-05-05 17:46:58 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"327001"}
+Completed 200 OK in 1296ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2766)
+
+
+Started GET "/weather/forecast?address=1234" for ::1 at 2024-05-05 17:47:07 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"1234"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started GET "/weather/forecast?address=12345" for ::1 at 2024-05-05 17:47:12 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"12345"}
+Completed 200 OK in 2488ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2630)
+
+
+Started GET "/weather/forecast?address=11111" for ::1 at 2024-05-05 17:47:20 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"11111"}
+Completed 200 OK in 1840ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2589)
+
+
+Started GET "/weather/forecast?address=11111" for ::1 at 2024-05-05 17:47:31 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"11111"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 436)
+
+
+Started GET "/weather/forecast?address=333333" for ::1 at 2024-05-05 17:47:36 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"333333"}
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.0ms | Allocations: 2297)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/weather_controller.rb:52:in `geoservice_data'
+app/controllers/weather_controller.rb:33:in `retrieve_cached_weather'
+app/controllers/weather_controller.rb:7:in `forecast'
+Started GET "/weather/forecast?address=333333" for ::1 at 2024-05-05 17:48:33 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"333333"}
+Completed 500 Internal Server Error in 118282ms (ActiveRecord: 0.0ms | Allocations: 19528)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/weather_controller.rb:53:in `geoservice_data'
+app/controllers/weather_controller.rb:33:in `retrieve_cached_weather'
+app/controllers/weather_controller.rb:7:in `forecast'
+Started GET "/weather/forecast?address=333333" for ::1 at 2024-05-05 17:50:34 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"333333"}
+Completed 422 Unprocessable Entity in 69ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1620)
+
+
+Started GET "/weather/forecast?address=11111" for ::1 at 2024-05-05 17:50:58 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"11111"}
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 452)
+
+
+Started GET "/weather/forecast?address=55555" for ::1 at 2024-05-05 17:51:02 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"55555"}
+API request timed out after 0.01 seconds.
+Completed 422 Unprocessable Entity in 352ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2581)
+
+
+Started GET "/weather/forecast?address=55555" for ::1 at 2024-05-05 17:52:13 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"55555"}
+API request timed out after 0.01 seconds.
+Completed 422 Unprocessable Entity in 130ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2443)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 17:52:23 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 67ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1341)
+
+
+Started GET "/weather/forecast?address=111111" for ::1 at 2024-05-05 17:52:29 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"111111"}
+API request timed out after 0.01 seconds.
+Completed 422 Unprocessable Entity in 106ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2060)
+
+
+Started GET "/weather/forecast?address=11111" for ::1 at 2024-05-05 17:52:33 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"11111"}
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 427)
+
+
+Started GET "/weather/forecast?address=23432" for ::1 at 2024-05-05 17:52:41 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"23432"}
+API request timed out after 0.01 seconds.
+Completed 422 Unprocessable Entity in 347ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2109)
+
+
+Started GET "/weather/forecast?address=23432" for ::1 at 2024-05-05 17:53:00 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"23432"}
+API request timed out after 0.01 seconds.
+Completed 422 Unprocessable Entity in 107ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2408)
+
+
+Started GET "/weather/forecast?address=55555" for ::1 at 2024-05-05 17:53:42 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"55555"}
+API request timed out after 0.01 seconds.
+Completed 422 Unprocessable Entity in 115ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2442)
+
+
+Started GET "/weather/forecast?address=23432" for ::1 at 2024-05-05 17:53:47 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"23432"}
+API request timed out after 0.01 seconds.
+Completed 422 Unprocessable Entity in 88ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2129)
+
+
+Started GET "/weather/forecast?address=23432" for ::1 at 2024-05-05 17:54:03 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"23432"}
+Completed 200 OK in 1178ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2899)
+
+
+Started GET "/weather/forecast?address=99999" for ::1 at 2024-05-05 17:54:11 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"99999"}
+Completed 200 OK in 1147ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2560)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 17:54:16 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 64ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1341)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 17:54:24 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 66ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1341)
+
+
+Started GET "/" for ::1 at 2024-05-05 17:59:21 +0530
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 795)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 1941)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 2814)
+
+
+Started GET "/weather/forecast?address=34555" for ::1 at 2024-05-05 17:59:25 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"34555"}
+Completed 200 OK in 1655ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 3026)
+
+
+Started GET "/weather/forecast?address=12345" for ::1 at 2024-05-05 17:59:32 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"12345"}
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 426)
+
+
+Started GET "/weather/forecast?address=999999" for ::1 at 2024-05-05 17:59:46 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"999999"}
+Completed 422 Unprocessable Entity in 79ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1367)
+
+
+Started GET "/weather/forecast?address=11111" for ::1 at 2024-05-05 17:59:53 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"11111"}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 427)
+
+
+Started GET "/weather/forecast?address=78568" for ::1 at 2024-05-05 17:59:59 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"78568"}
+Completed 200 OK in 1233ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2674)
+
+
+Started GET "/" for ::1 at 2024-05-05 19:03:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weather/index.html.erb within layouts/application
+  Rendered weather/index.html.erb within layouts/application (Duration: 39.2ms | Allocations: 2773)
+  Rendered layout layouts/application.html.erb (Duration: 164.4ms | Allocations: 25957)
+Completed 200 OK in 176ms (Views: 172.3ms | ActiveRecord: 0.0ms | Allocations: 29825)
+
+
+Started GET "/weather/forecast?address=10001" for ::1 at 2024-05-05 19:03:55 +0530
+Processing by WeatherController#forecast as HTML
+  Parameters: {"address"=>"10001"}
+Completed 200 OK in 2218ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 4961)
+
+
