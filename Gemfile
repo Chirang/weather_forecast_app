@@ -40,6 +40,8 @@ gem 'dotenv-rails'
 gem 'redis'
 gem 'redis-rails'
 
+gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
+gem 'webmock', '~> 3.14'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
